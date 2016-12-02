@@ -10,15 +10,15 @@
 		<header class="main-header">
 		<div class="container">
 			<div class='main-logo'>
-				<img src="#" alt="" width="" height="">
+				<img class="main-logo__img" src="#" alt="" width="" height="">
 			</div>
 			<nav class="main-navigation">
-				<ul class="main-navigation__sections">
-					<li><a hrf="#">Информация</a></li>
-					<li><a hrf="#">Новости</a></li>
-					<li><a hrf="#">Прайс-лист</a></li>
-					<li class="main-navigation_section_active"><a hrf="#">Магазин</a></li>
-					<li><a hrf="#">Контакты</a></li>
+				<ul class="main-navigation__list">
+					<li class="main-navigation__item"><a hrf="#">Информация</a></li>
+					<li class="main-navigation__item"><a hrf="#">Новости</a></li>
+					<li class="main-navigation__item"><a hrf="#">Прайс-лист</a></li>
+					<li class="main-navigation__item main-navigation__item_active"><a hrf="#">Магазин</a></li>
+					<li class="main-navigation__item"><a hrf="#">Контакты</a></li>
 				</ul>
 			</nav>
 			<div class="user-block">
@@ -27,31 +27,49 @@
 		</div>
 		</header>
 		<main class="container">
-			<h1>Средства для ухода</h1>
+			<h1 class="page-title">Средства для ухода</h1>
 			<div class="breadcrumbs">
 				<ul class="breadcrumbs__list">
-					<li><a href="#">Главная</a></li>
-					<li><a href="#">Магазин</a></li>
-					<li>Средства для ухода</li>
+					<li class="breadcrumbs__item"><a href="#">Главная</a></li>
+					<li class="breadcrumbs__item"><a href="#">Магазин</a></li>
+					<li class="breadcrumbs__item">Средства для ухода</li>
 				</ul>
 			</div>
 			<section class="catalog-filters">
 				<form class="catalog-filters__form" action="#" method="post">
 
-					<b>Производители:</b>
-					<label><input type="checkbox" checked="">Baxter of California</label>
-					<label><input type="checkbox">Mr Natty</label>
-					<label><input type="checkbox" checked="">Suavecito</label>
-					<label><input type="checkbox">Milan + Goetz</label>
-					<label><input type="checkbox">Murrays</label>
-					<label><input type="checkbox" checked="">Amirican Crew</label>
+					<b class="catalog-filters__title">Производители:</b>
+					<label class="catalog-filters__input-name">
+						<input class="catalog-filters__checkbox" type="checkbox" checked="">Baxter of California
+					</label>
+					<label class="catalog-filters__input-name">
+						<input class="catalog-filters__checkbox" type="checkbox">Mr Natty
+					</label>
+					<label class="catalog-filters__input-name">
+						<input class="catalog-filters__checkbox" type="checkbox" checked="">Suavecito
+					</label>
+					<label class="catalog-filters__input-name">
+						<input class="catalog-filters__checkbox" type="checkbox">Milan + Goetz
+					</label>
+					<label class="catalog-filters__input-name">
+						<input class="catalog-filters__checkbox" type="checkbox">Murrays
+					</label>
+					<label class="catalog-filters__input-name">
+						<input class="catalog-filters__checkbox" type="checkbox" checked="">Amirican Crew
+					</label>
 
-					<b>Группы товаров:</b>
-					<label><input type="radio" value="Бритвенные принадлежности">Бритвенные принадлежности</label>
-					<label><input type="radio" value="Средства для ухода">Средства для ухода</label>
-					<label><input type="radio" value="Аксуссуары">Аксуссуары</label>
+					<b class="catalog-filters__title">Группы товаров:</b>
+					<label class="catalog-filters__input-name">
+						<input class="catalog-filters__radio-button" type="radio" value="Бритвенные принадлежности">Бритвенные принадлежности
+					</label>
+					<label class="catalog-filters__input-name">
+						<input class="catalog-filters__radio-button" type="radio" value="Средства для ухода">Средства для ухода
+					</label>
+					<label class="catalog-filters__input-name">
+						<input class="catalog-filters__radio-button" type="radio" value="Аксуссуары">Аксуссуары
+					</label>
 					
-					<button class="btn catalog-filters__button" type="button">Показать</button>
+					<button class="catalog-filters__button btn" type="button">Показать</button>
 
 				</form>	
 
@@ -62,82 +80,105 @@
 					<div class="catalog-product__image">
 						<img src="#" alt="" width="" height="">
 					</div>
-					<div class="catalog-product__name"><p>Набот для путешествий "Baxter of California"</p></div>
-					<div class="catalog-product__price">
-						<b>2900<span>руб.</span></b>
-						<button class="btn catalog-product__button">Купить</button>
+					<p class="catalog-product__name">Набот для путешествий "Baxter of California"</p>
+					<div class="product-order">
+						<b class="product-order__price">2900
+							<span class="product-order__currency">руб.</span>
+						</b>
+						<button class="product-order__button btn">Купить</button>
 					</div>
 				</article>
 				<article class="catalog-product">
 					<div class="catalog-product__image">
 						<img src="#" alt="" width="" height="">
 					</div>
-					<div class="catalog-product__name"><p>Набот для путешествий "Baxter of California"</p></div>
-					<div class="catalog-product__price">
-						<b>2900<span>руб.</span></b>
-						<button class="btn catalog-product__button">Купить</button>
+					<p class="catalog-product__name">Набот для путешествий "Baxter of California"</p>
+					<div class="product-order">
+						<b class="product-order__price">2900
+							<span class="product-order__currency">руб.</span>
+						</b>
+						<button class="product-order__button btn">Купить</button>
 					</div>
 				</article>
 				<article class="catalog-product">
 					<div class="catalog-product__image">
 						<img src="#" alt="" width="" height="">
 					</div>
-					<div class="catalog-product__name"><p>Набот для путешествий "Baxter of California"</p></div>
-					<div class="catalog-product__price">
-						<b>2900<span>руб.</span></b>
-						<button class="btn catalog-product__button">Купить</button>
+					<p class="catalog-product__name">Набот для путешествий "Baxter of California"</p>
+					<div class="product-order">
+						<b class="product-order__price">2900
+							<span class="product-order__currency">руб.</span>
+						</b>
+						<button class="product-order__button btn">Купить</button>
 					</div>
 				</article>
 				<article class="catalog-product">
 					<div class="catalog-product__image">
 						<img src="#" alt="" width="" height="">
 					</div>
-					<div class="catalog-product__name"><p>Набот для путешествий "Baxter of California"</p></div>
-					<div class="catalog-product__price">
-						<b>2900<span>руб.</span></b>
-						<button class="btn catalog-product__button">Купить</button>
+					<p class="catalog-product__name">Набот для путешествий "Baxter of California"</p>
+					<div class="product-order">
+						<b class="product-order__price">2900
+							<span class="product-order__currency">руб.</span>
+						</b>
+						<button class="product-order__button btn">Купить</button>
 					</div>
 				</article>
 				<article class="catalog-product">
 					<div class="catalog-product__image">
 						<img src="#" alt="" width="" height="">
 					</div>
-					<div class="catalog-product__name"><p>Набот для путешествий "Baxter of California"</p></div>
-					<div class="catalog-product__price">
-						<b>2900<span>руб.</span></b>
-						<button class="btn catalog-product__button">Купить</button>
+					<p class="catalog-product__name">Набот для путешествий "Baxter of California"</p>
+					<div class="product-order">
+						<b class="product-order__price">2900
+							<span class="product-order__currency">руб.</span>
+						</b>
+						<button class="product-order__button btn">Купить</button>
 					</div>
 				</article>
+				<article class="catalog-product">
+					<div class="catalog-product__image">
+						<img src="#" alt="" width="" height="">
+					</div>
+					<p class="catalog-product__name">Набот для путешествий "Baxter of California"</p>
+					<div class="product-order">
+						<b class="product-order__price">2900
+							<span class="product-order__currency">руб.</span>
+						</b>
+						<button class="product-order__button btn">Купить</button>
+					</div>
+				</article>
+				
 			</section>
 			<div class="pagination">
-				<ul>
-					<li><a href="#">1</a></li>
-					<li class="pagination__page_active">2</li>
-					<li><a href="#">3</a></li>
-					<li><a href="#">4</a></li>
-					<li><a href="#">5</a></li>
+				<ul class="pagination__list">
+					<li class="pagination__item"><a href="#">1</a></li>
+					<li class="pagination__item pagination__item_activ">2</li>
+					<li class="pagination__item"><a href="#">3</a></li>
+					<li class="pagination__item"><a href="#">4</a></li>
+					<li class="pagination__item"><a href="#">5</a></li>
 				</ul>
 			</div>
 		</main>
 		<footer class="main-footer">
 			<div class="container">
 				<section class="main-footer__address">
-					<p>
+					<p class="main-footer__address-details">
 						Барбершоп "Бородинский"<br>
 						Адрес: г. Санкт-Петербург, ул. Б.Конюшенная, 19/8<br>
-						<a href="#">Как нас найти?</a><br>
+						<a class="main-footer__link" href="#">Как нас найти?</a><br>
 						Телефон: +7 (495) 666-02-66
 					</p>
 				</section>
-				<section class="main-footer__social-bock">
-					<span>Давайте дружить</span>
-					<div class="main-footer__vk">
+				<section class="main-footer__social">
+					<span class="main-footer__social-title">Давайте дружить</span>
+					<div class="main-footer__social main-footer__social_vk">
 						<a href="#"></a>
 					</div>
-					<div class="main-footer__fc">
+					<div class="main-footer__social main-footer__social_fc">
 						<a href="#"></a>
 					</div>
-					<div class="main-footer__in">
+					<div class="main-footer__social main-footer__social_tw">
 						<a href="#"></a>
 					</div>			
 				</section>
