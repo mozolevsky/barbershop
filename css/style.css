@@ -1,34 +1,42 @@
 body {
-	font-family: 'PT Sans Narrow', 'Arial' sans-serif;
+	font-family: 'PT Sans Narrow', 'Arial', sans-serif;
 	font-size: 14px;
-	font-weight: normal;
+	font-weight: bold;
 	color: #000000;
-}
-
-.page-title {
-	font-size: 30px;
-	line-height: 42px;
 }
 
 .container {
 	margin: 0 auto;
 	width: 70%; 
-	background-color: #FBEB70; 
 }
 
 /*<==================== header ====================>*/
 
 .main-header {
-	height: 70px;
-	
+	width: 100%;
+	background-color: #000;
+}
+
+.main-header > .container{
+	min-height: 70px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	background-color: #FBEB70;
+	flex-wrap: wrap;
+	
+
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 16px;
 }
 
 .main-navigation {
-	width: 70%;
+	
+}
+
+.main-navigation ul {
+	margin: 0;
+	padding: 0;
 }
 
 .main-navigation__list {
@@ -36,42 +44,91 @@ body {
 	justify-content: space-between;
 	align-items: center;
 	flex-wrap: wrap;
-	padding-left: 0;
-	margin-left: 20px;
-
-	background-color: red;
 	list-style-type: none;
 	
 }
 
-.user-block {
-	width: 67px;
-	margin-right: 20px;
-	background-color: red;
+.main-navigation__item {
+	
+}
 
+.main-navigation__item a{
+	display: block;
+	padding: 26px 20px;
+}
+
+.main-navigation__item img {
+	display: block;
+	padding: 23px 20px;
+}
+
+.main-navigation__item a:hover, a:active {
+	cursor: pointer;
+	background-color: #242424;
+}
+
+.main-navigation__item_active {
+	box-shadow: inset 0 -4px #fff;
+}
+
+
+
+.user-block {
+	position: relative;
+}
+
+.user-block::before {
+	position: absolute;
+	top: 27px;
+	left: 18px;
+	content: "";
+	display: block;
+	width: 18px;
+    height: 16px;
+    background-image: url("../img/spritesheet.png");
+    background-position: -5px -59px;
+	background-repeat: no-repeat;
+	opacity: 0.3;
+    
+}
+
+.user-block:hover::before {
+	opacity: 1;
 }
 
 .user-block__link {
-	padding-left: 32px;
+	display: block;
+	padding: 26px 25px 26px 50px;
+	color: #fff;
+	text-decoration: none;
 }
+
+.user-block__link:hover, .user-block__link:active {
+	background-color: #242424;
+	cursor: pointer;
+}
+
+
 
 /*<==================== catalog-list ====================>*/
 
 main {
 	border: 1px solid transparent;
+	background: #f5f2ef url("../img/main-bg.jpg") repeat;
 
 }
 
+
 .page-title {
-	margin-top: 60px;
-	background-color: red;
+	margin-top: 49px;
+	text-transform: uppercase;
+	font-size: 30px;
+	line-height: 42px;
 }
 
 .breadcrumbs {
-	margin-top: 30px;
+	margin-top: 17px;
 	margin-bottom: 60px;
-	background-color: red;
-
 }
 
 .breadcrumbs__list {
@@ -79,12 +136,35 @@ main {
 	padding-left: 0;
 }
 
+
 .breadcrumbs__item {
+	position: relative;
 	display: inline-block;
+	padding-right: 25px;
+	margin-right: 15px;
+	text-transform: uppercase;
+	color: #aba9a7;
 }
 
 .breadcrumbs__item  a {
-	padding-right: 28px;
+	color: black;
+	text-decoration: none;
+}
+
+.breadcrumbs__item::after {
+	content: "";
+	position: absolute;
+	top: 3px;
+	right: 0;
+	width: 8px;
+	height: 8px;
+	background-color: black;
+	transform: rotate(45deg);
+}
+
+.breadcrumbs__item:last-child::after {
+	content: "";
+	background-color: transparent;
 }
 
 .catalog-wrapper {
@@ -97,25 +177,66 @@ main {
 .catalog-filters {
 	flex-basis: 240px;
 	flex-shrink: 0;
-	background-color: lightgreen;
 }
 
 .catalog-filters__title {
 	margin-bottom: 35px;
+	margin-top: 50px;
+
+	text-transform: uppercase;
+	font-size: 30px;
+}
+
+.catalog-filters__title:first-child {
+	margin-top: 0;
 }
 
 .catalog-filters__input-name {
 	margin-bottom: 18px;
 	display: block;
+	text-transform: uppercase;
 }
 
-.catalog-filters__input-name:nth-child(7) {
-	margin-bottom: 55px;
+
+input[type="checkbox"] {
+	display: none;
 }
 
-.catalog-filters__input-name:nth-child(11) {
-	margin-bottom: 50px;
+input[type="checkbox"] + label {
+	display: block;
+	margin: 17px 0;
+	padding-left: 45px;
+	line-height: 18px;
+	position: relative;
+	cursor: pointer;
 }
+
+
+input[type="checkbox"] + label::before {
+	content:"";
+	width: 16px;
+	height: 16px;
+	border: 2px solid #000;
+	background-color: #f9f6f3;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+input[type="checkbox"]:checked + label::after {
+	content: "";
+    width: 20px;
+    height: 20px;
+    background: url(../img/spritesheet.png) no-repeat;
+    background-position: -5px -5px;
+
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    transform: translate(-50%, -50%);
+}
+
 
 .catalog-products {
 	display: flex;

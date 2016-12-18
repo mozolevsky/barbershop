@@ -5,11 +5,13 @@
 		<title>Каталог товаров Барбершопа Барадинского</title>
 		<meta name="description" content="#">
 		<meta name="keywords" content="#">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic" rel="stylesheet">
 	</head>
 	<body>
-		<header class="main-header container">
+		<header class="main-header">
+		<div class="container">
 			<nav class="main-navigation">
 				<ul class="main-navigation__list">
 					<li class="main-navigation__item">
@@ -25,8 +27,10 @@
 			<div class="user-block">
 				<a class="user-block__link" href="#">Вход</a>
 			</div>
+		</div>	
 		</header>
-		<main class="container">
+		<main>
+		<div class="container">
 			<h1 class="page-title">Средства для ухода</h1>
 			<div class="breadcrumbs">
 				<ul class="breadcrumbs__list">
@@ -35,31 +39,33 @@
 					<li class="breadcrumbs__item">Средства для ухода</li>
 				</ul>
 			</div>
-			<section class="catalog-wrapper">
+			<div class="catalog-wrapper">
 				<aside class="catalog-filters">
 					<form class="catalog-filters__form" action="#" method="get">
 
 						<p class="catalog-filters__title">Производители:</p>
-						<label class="catalog-filters__input-name">
-							<input class="catalog-filters__checkbox" type="checkbox" name="Baxter of California" checked>Baxter of California
-						</label>
-						<label class="catalog-filters__input-name">
-							<input class="catalog-filters__checkbox" type="checkbox" name="Mr Natty">Mr Natty
-						</label>
-						<label class="catalog-filters__input-name">
-							<input class="catalog-filters__checkbox" type="checkbox" name="Suavecito" checked>Suavecito
-						</label>
-						<label class="catalog-filters__input-name">
-							<input class="catalog-filters__checkbox" type="checkbox" name="Milan + Goetz">Milan + Goetz
-						</label>
-						<label class="catalog-filters__input-name">
-							<input class="catalog-filters__checkbox" type="checkbox" name="Murrays">Murrays
-						</label>
-						<label class="catalog-filters__input-name">
-							<input class="catalog-filters__checkbox" type="checkbox" name="Amirican Crew" checked>Amirican Crew
-						</label>
+						<input class="catalog-filters__checkbox" id="ch1" type="checkbox" name="Baxter of California" checked>
+						<label class="catalog-filters__input-name" for="ch1">Baxter of California</label>
+
+						<input class="catalog-filters__checkbox" id="ch2" type="checkbox" name="Mr Natty">
+						<label class="catalog-filters__input-name" for="ch2">Mr Natty</label>
+
+						
+						<input class="catalog-filters__checkbox" id="ch3" type="checkbox" name="Suavecito" checked>
+						<label class="catalog-filters__input-name" for="ch3">Suavecito</label>
+
+						
+						<input class="catalog-filters__checkbox" id="ch4" type="checkbox" name="Milan + Goetz">
+						<label class="catalog-filters__input-name" for="ch4">Milan + Goetz</label>
+
+						<input class="catalog-filters__checkbox" id="ch5" type="checkbox" name="Murrays">
+						<label class="catalog-filters__input-name" for="ch5">Murrays</label>
+
+						<input class="catalog-filters__checkbox" id="ch6" type="checkbox" name="Amirican Crew" checked>
+						<label class="catalog-filters__input-name" for="ch6">Amirican Crew</label>
 
 						<p class="catalog-filters__title">Группы товаров:</p>
+						
 						<label class="catalog-filters__input-name">
 							<input class="catalog-filters__radio-button" type="radio" name="group" value="Бритвенные принадлежности">Бритвенные принадлежности
 						</label>
@@ -73,10 +79,7 @@
 						<button class="catalog-filters__button btn" type="submit">Показать</button>
 
 					</form>	
-
-					</div>
 				</aside>
-				
 				<div class="catalog-products-wrapper">
 					<section class="catalog-products">
 						<article class="catalog-product">
@@ -171,13 +174,10 @@
 							<li class="pagination__item"><a href="#">3</a></li>
 							<li class="pagination__item"><a href="#">4</a></li>
 							<li class="pagination__item"><a href="#">5</a></li>
-						</ul>
-					</div>	
+						</ul></div>	
 				</div>
-			</section>
-			
-			
-
+			</div>
+			</div>
 		</main>
 		<footer class="main-footer container">
 			<section class="main-footer__address">
