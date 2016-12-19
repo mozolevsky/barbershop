@@ -20,7 +20,7 @@
 					<li class="main-navigation__item"><a hrf="#">Информация</a></li>
 					<li class="main-navigation__item"><a hrf="#">Новости</a></li>
 					<li class="main-navigation__item"><a hrf="#">Прайс-лист</a></li>
-					<li class="main-navigation__item main-navigation__item_active"><a hrf="#">Магазин</a></li>
+					<li class="main-navigation__item main-navigation__item_active">Магазин</li>
 					<li class="main-navigation__item"><a hrf="#">Контакты</a></li>
 				</ul>
 			</nav>
@@ -66,15 +66,14 @@
 
 						<p class="catalog-filters__title">Группы товаров:</p>
 						
-						<label class="catalog-filters__input-name">
-							<input class="catalog-filters__radio-button" type="radio" name="group" value="Бритвенные принадлежности">Бритвенные принадлежности
-						</label>
-						<label class="catalog-filters__input-name">
-							<input class="catalog-filters__radio-button" type="radio" name="group" value="Средства для ухода">Средства для ухода
-						</label>
-						<label class="catalog-filters__input-name">
-							<input class="catalog-filters__radio-button" type="radio" name="group" value="Аксуссуары">Аксуссуары
-						</label>
+						<input class="catalog-filters__radio-button" id="rb1" type="radio" name="group" value="Бритвенные принадлежности" checked>
+						<label class="catalog-filters__input-name" for="rb1">Бритвенные принадлежности</label>
+
+						<input class="catalog-filters__radio-button" id="rb2" type="radio" name="group" value="Средства для ухода">
+						<label class="catalog-filters__input-name" for="rb2">Средства для ухода</label>
+
+						<input class="catalog-filters__radio-button" id="rb3" type="radio" name="group" value="Аксуссуары">
+						<label class="catalog-filters__input-name" for="rb3">Аксуссуары</label>
 						
 						<button class="catalog-filters__button btn" type="submit">Показать</button>
 
@@ -179,7 +178,8 @@
 			</div>
 			</div>
 		</main>
-		<footer class="main-footer container">
+		<footer class="main-footer">
+		<div class="container">
 			<section class="main-footer__address">
 					<p class="main-footer__address-details">
 						Барбершоп "Бородинский"<br>
@@ -188,24 +188,17 @@
 						Телефон: +7 (495) 666-02-66
 					</p>
 				</section>
-				<section class="main-footer__social">
-					<span class="main-footer__social-title">Давайте дружить</span>
-					<div class="main-footer__social main-footer__social_vk">
-						<a href="#"></a>
-					</div>
-					<div class="main-footer__social main-footer__social_fc">
-						<a href="#"></a>
-					</div>
-					<div class="main-footer__social main-footer__social_tw">
-						<a href="#"></a>
-					</div>			
+				<section class="main-footer__social-networks">
+					<p class="main-footer__social-title">Давайте дружить</p>
+					<a class="main-footer__social main-footer__social_vk" href="#">Вконтакте</a>
+					<a class="main-footer__social main-footer__social_fc" href="#">Фэйсбук</a>
+					<a class="main-footer__social main-footer__social_in" href="#">Инстаграмм</a>
 				</section>
 				<section class="main-footer__developer">
 					<span>Разработано:</span>
-					<div class="main-footer__developer-name">
-						<a href="#">Htmlacademy.ru</a>
-					</div>
+					<a class="main-footer__developer-name" href="#">Htmlacademy.ru</a>
 				</section>
+		</div>		
 		</footer>
 	</body>
 </html>
