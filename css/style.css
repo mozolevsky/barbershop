@@ -147,7 +147,7 @@ main {
 
 .breadcrumbs {
 	margin-top: 17px;
-	margin-bottom: 50px;
+	margin-bottom: 55px;
 }
 
 .breadcrumbs__list {
@@ -196,6 +196,12 @@ main {
 .catalog-filters {
 	flex-basis: 240px;
 	flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+	.catalog-filters {
+		display: none;
+	}
 }
 
 .catalog-filters__title {
@@ -290,22 +296,27 @@ input[type="radio"]:checked + label::after {
 
 .catalog-products {
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 	flex-wrap: wrap;
 	align-content: flex-start;
-	margin-right: 10px;
 	margin-top: 5px;
 }
 
 .catalog-product {
 	flex-basis: 220px;
 	margin-bottom: 20px;
+	margin-right: 10px;
+	flex-grow: 1;
 	background-color: white;
 	box-shadow: 0 0 15px 3px rgba(0, 1, 1, 0.1);
 }
 
 .catalog-product:hover {
 	box-shadow: 0 0 15px 5px rgba(0, 1, 1, 0.1);
+}
+
+.catalog-product__image > img {
+	width: 100%;
 }
 
 .catalog-product__name {
@@ -330,11 +341,16 @@ input[type="radio"]:checked + label::after {
 
 .product-order__price {
 	flex-basis: 109px;
+	flex-grow: 1;
 	background-color: #e5e5e5;
 	display: inline-block;
     text-align: center;
     vertical-align: middle;
     line-height: 44px;
+}
+
+.product-order__button {
+	flex-grow: 1;
 }
 
 
@@ -377,6 +393,7 @@ input[type="radio"]:checked + label::after {
 
 .main-footer {
 	padding-top: 60px;
+	padding-bottom: 35px;
 	background: #000 url("../img/footer-bg.jpg") no-repeat;
 
 	color: white;
@@ -496,6 +513,7 @@ input[type="radio"]:checked + label::after {
 	justify-content: space-between;
 	align-items: flex-start;
 	flex-wrap: wrap;
+	margin-bottom: 50px;
 }
 
 .item-gallery {
@@ -505,7 +523,13 @@ input[type="radio"]:checked + label::after {
 
 .item-gallery__big-image {
 	margin-bottom: 20px;
+	box-shadow: 0 0 15px 3px rgba(0, 1, 1, 0.1);
 	
+}
+
+.item-gallery__big-image > img {
+	margin-bottom: -3px;
+	max-width: 100%;
 }
 
 .item-gallery__additional-images {
@@ -513,10 +537,31 @@ input[type="radio"]:checked + label::after {
 	justify-content: space-between;
 	align-items: center;
 	flex-grow: 1;
+	flex-wrap: wrap;
 }
 
+.item-gallery__additional-img {
+	box-shadow: 0 0 15px 3px rgba(0, 1, 1, 0.1);
+	margin-bottom: 10px;
+	overflow:hidden;
+	width: 140px;
+	height: 149px;
+}
+
+.item-gallery__additional-img > img {
+	margin-bottom: -2px;
+	transition: all 1s ease-out;
+}
+
+.item-gallery__additional-img > img:hover {
+	transform: scale(1.05);
+}
+
+
 .item-details {
-	flex-basis: 390px;
+	flex-basis: 394px;
+	text-transform: uppercase;
+	line-height: 24px;
 }
 
 .item-details__parameters {
@@ -536,10 +581,22 @@ input[type="radio"]:checked + label::after {
 .item-details__article {
 	float: right;
 	margin-right: 10px;
+	color: #b8b8b7;
 }
 
 .item-details__description-wrapper {
-	margin: 45px 0;
+	margin: 25px 0;
+	margin-bottom: 35px;
+}
+
+.item-details > .product-order {
+	margin: 0;
+	padding: 0;
+}
+
+.item-details .product-order__price,
+.item-details .product-order__button {
+	flex-grow: 0;
 }
 
 .item-details__components {
@@ -547,12 +604,67 @@ input[type="radio"]:checked + label::after {
 }
 
 .item-details__components-title {
+	font-size: 24px;
+	line-height: 30px;
 	display: block;
-	margin-bottom: 40px;
+	margin-bottom: 24px;
 }
 
 .item-details__components-list {
 	padding: 0;
 	margin: 0;
 	list-style-type: none;
+}
+
+.item-details__components-item {
+	padding-left: 20px;
+	position: relative;
+}
+
+.item-details__components-item::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: "";
+    position: absolute;
+    top: 8px;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    background-color: black;
+    transform: rotate(45deg);
+
+}
+
+/*<==================== login-form ====================>*/
+
+.background {
+	width: 100%;
+	min-height: 1000px;
+	background-color: black;
+	opacity: 0.5;
+}
+
+.login-form {
+	width: 460px;
+	min-height: 386px;
+	background: #f5f2ef url(../img/main-bg.jpg);
+	padding: 50px 80px 60px 80px;
+	box-sizing: border-box;
+
+	position: fixed;
+	margin-left: -230px;
+	top: 100px;
+	left: 50%;
+
+	text-transform: uppercase;
+
+}
+
+.login-form__title {
+	font-size: 30px;
+	margin: 0;
+	padding: 0;
+	margin-bottom: 20px;
+
 }
