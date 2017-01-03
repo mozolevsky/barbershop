@@ -1,5 +1,6 @@
 'use strict'
 
+/*<============ login form ===================>*/
 
 function Element(selector) {
 	this._selector = selector;
@@ -92,4 +93,24 @@ window.addEventListener("keydown", function(event){
         bg.hide();
         form.hide();
     }
+});
+
+/*<============ product gallery ===================>*/
+
+var minImagesBlock = document.querySelector('.item-gallery__additional-images');
+var bigImageBlock = document.querySelector('.item-gallery__big-image');
+
+minImagesBlock.addEventListener("click", function (event) {
+    var target = event.target;
+
+    if (~target.parentNode.className.indexOf('item-gallery__additional-img')) {
+        bigImageBlock.firstElementChild.classList.add('animation-opacity');
+        setTimeout(function () {
+            bigImageBlock.firstElementChild.classList.remove('animation-opacity');
+        }, 600);
+
+        bigImageBlock.firstElementChild.setAttribute('src', target.getAttribute('src'));
+
+    }
+
 });

@@ -5,6 +5,11 @@ body {
 	color: #000000;
 }
 
+img {
+	max-width: 100%;
+	height: auto;
+}
+
 .container {
 	margin: 0 auto;
 	width: 70%; 
@@ -532,7 +537,13 @@ input[type="radio"]:checked + label::after {
 
 .item-gallery__big-image > img {
 	margin-bottom: -3px;
-	max-width: 100%;
+	width: 460px;
+    height: 498px;
+}
+
+.animation-opacity {
+	animation-name: opacity;
+	animation-duration: 0.5s;
 }
 
 .item-gallery__additional-images {
@@ -558,6 +569,7 @@ input[type="radio"]:checked + label::after {
 
 .item-gallery__additional-img > img:hover {
 	transform: scale(1.05);
+	cursor: pointer;
 }
 
 
@@ -824,4 +836,29 @@ input[type="checkbox"] + label.login-form__label {
 	  20%, 40%, 60%, 80% {
 	transform: translateX(10px);
 	}
+}
+
+/*<========================= animation for gallery ====================>*/
+
+@keyframes opacity {
+	0% {
+		opacity: 0;
+	}
+	10% {
+		opacity: 0.25;
+	}
+	30% {
+		opacity: 0.4;
+	}
+	50% {
+		opacity: 0.6;
+	}
+	80% {
+		opacity: 0.8;
+	}
+
+	100% {
+		opacity: 1;
+	}
+
 }
