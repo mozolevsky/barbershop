@@ -108,7 +108,10 @@ body {
     background-position: -1px -14px;
 	background-repeat: no-repeat;
 	opacity: 0.3;
-    
+}
+
+.user-block:hover::before {
+	cursor: pointer;
 }
 
 .user-block:hover::before {
@@ -641,16 +644,16 @@ input[type="radio"]:checked + label::after {
 .background {
 	background-color: black;
     opacity: 0.5;
-    position: absolute;
+    position: fixed;
     z-index: 2;
     top: 0;
     width: 100%;
-    min-height: 1280px;
-    display: none;
+    height: 100%;
+    display: block;
 }
 
 .login-form {
-	display: none;
+	display: block;
 	width: 460px;
 	min-height: 386px;
 	background: #f5f2ef url(../img/main-bg.jpg);
@@ -665,7 +668,13 @@ input[type="radio"]:checked + label::after {
 
 	text-transform: uppercase;
 	box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+	animation: bounce 0.6s;
 
+	
+}
+
+.login-form_error {
+	animation: shake 0.6s;
 }
 
 .login-form__cross {
@@ -773,4 +782,46 @@ input[type="checkbox"] + label.login-form__label {
 .login-form__button {
 	width: 100%;
 	margin-top: 15px;
+}
+
+.hide {
+	display: none;
+}
+
+/* <============== animation for form ==============>*/
+
+@keyframes bounce {
+	0% {
+		transform: translateY(-2000px);
+	}
+
+	40% {
+		transform: translateY(50px);
+	}
+
+	70% {
+		transform: translateY(-20px);
+	}
+
+	90% {
+		transform: translateY(10px);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes shake {
+	0%, 100% {
+		transform: translateX(0);
+	}
+
+	10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+	}
+
+	  20%, 40%, 60%, 80% {
+	transform: translateX(10px);
+	}
 }
