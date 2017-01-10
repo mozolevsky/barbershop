@@ -25,6 +25,8 @@ img {
 	color: white;
 	text-transform: uppercase;
 
+	-webkit-transition: background-color 0.5s;
+
 	transition: 
 	background-color 0.5s
 }
@@ -44,10 +46,17 @@ img {
 
 .main-header > .container{
 	min-height: 70px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 	
 
 	text-transform: uppercase;
@@ -61,10 +70,17 @@ img {
 }
 
 .main-navigation__list {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 	list-style-type: none;
 
 }
@@ -74,6 +90,8 @@ img {
 	display: block;
 	padding: 26px 20px;
 	background-color: black;
+
+	-webkit-transition: background-color 0.5s;
 
 	transition: 
 	background-color 0.5s;
@@ -186,7 +204,8 @@ main {
 	width: 8px;
 	height: 8px;
 	background-color: black;
-	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	        transform: rotate(45deg);
 }
 
 .breadcrumbs__item:last-child::after {
@@ -195,15 +214,23 @@ main {
 }
 
 .catalog-wrapper {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: flex-start;
-	justify-content: flex-start;
+	-webkit-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	-webkit-box-pack: start;
+	    -ms-flex-pack: start;
+	        justify-content: flex-start;
 	margin-bottom: 45px;
 }
 
 .catalog-filters {
-	flex-basis: 240px;
-	flex-shrink: 0;
+	-ms-flex-preferred-size: 240px;
+	    flex-basis: 240px;
+	-ms-flex-negative: 0;
+	    flex-shrink: 0;
 }
 
 @media (max-width: 768px) {
@@ -268,7 +295,8 @@ input[type="checkbox"]:checked + label::after {
     position: absolute;
     top: 14px;
     left: 14px;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 }
 
 input[type="radio"] + label::before {
@@ -294,7 +322,8 @@ input[type="radio"]:checked + label::after {
 	position: absolute;
 	top: 10px;
 	left: 10px;
-	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
 }
 
 .catalog-filters__button {
@@ -303,18 +332,27 @@ input[type="radio"]:checked + label::after {
 
 
 .catalog-products {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: flex-start;
-	flex-wrap: wrap;
-	align-content: flex-start;
+	-webkit-box-pack: start;
+	    -ms-flex-pack: start;
+	        justify-content: flex-start;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-ms-flex-line-pack: start;
+	    align-content: flex-start;
 	margin-top: 5px;
 }
 
 .catalog-product {
-	flex-basis: 220px;
+	-ms-flex-preferred-size: 220px;
+	    flex-basis: 220px;
 	margin-bottom: 20px;
 	margin-right: 10px;
-	flex-grow: 1;
+	-webkit-box-flex: 1;
+	    -ms-flex-positive: 1;
+	        flex-grow: 1;
 	background-color: white;
 	box-shadow: 0 0 15px 3px rgba(0, 1, 1, 0.1);
 }
@@ -344,12 +382,17 @@ input[type="radio"]:checked + label::after {
 
 .product-order {
 	margin: 0 16px 17px 16px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 }
 
 .product-order__price {
-	flex-basis: 109px;
-	flex-grow: 1;
+	-ms-flex-preferred-size: 109px;
+	    flex-basis: 109px;
+	-webkit-box-flex: 1;
+	    -ms-flex-positive: 1;
+	        flex-grow: 1;
 	background-color: #e5e5e5;
 	display: inline-block;
     text-align: center;
@@ -358,7 +401,9 @@ input[type="radio"]:checked + label::after {
 }
 
 .product-order__button {
-	flex-grow: 1;
+	-webkit-box-flex: 1;
+	    -ms-flex-positive: 1;
+	        flex-grow: 1;
 }
 
 
@@ -447,6 +492,8 @@ input[type="radio"]:checked + label::after {
 	height: 43px;
 	margin-right: 2px;
 	background: #000 url("../img/spritesheet.png") no-repeat;
+	-webkit-transition: background-position 0.5s, 
+	background-color 0.5s;
 	transition: 
 	background-position 0.5s, 
 	background-color 0.5s;
@@ -503,6 +550,9 @@ input[type="radio"]:checked + label::after {
 	padding: 15px 20px;
 	text-decoration: none;
 
+	-webkit-transition: color 0.5s,
+	background-color 0.5s;
+
 	transition: 
 	color 0.5s,
 	background-color 0.5s;
@@ -517,15 +567,23 @@ input[type="radio"]:checked + label::after {
 /*<==================== catalog-item ====================>*/
 
 .item-wrapper {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
-	align-items: flex-start;
-	flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 	margin-bottom: 50px;
 }
 
 .item-gallery {
-	flex-basis: 460px;
+	-ms-flex-preferred-size: 460px;
+	    flex-basis: 460px;
 
 }
 
@@ -542,16 +600,27 @@ input[type="radio"]:checked + label::after {
 }
 
 .animation-opacity {
-	animation-name: opacity;
-	animation-duration: 0.5s;
+	-webkit-animation-name: opacity;
+	        animation-name: opacity;
+	-webkit-animation-duration: 0.5s;
+	        animation-duration: 0.5s;
 }
 
 .item-gallery__additional-images {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	flex-grow: 1;
-	flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-flex: 1;
+	    -ms-flex-positive: 1;
+	        flex-grow: 1;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 }
 
 .item-gallery__additional-img {
@@ -564,17 +633,20 @@ input[type="radio"]:checked + label::after {
 
 .item-gallery__additional-img > img {
 	margin-bottom: -2px;
+	-webkit-transition: all 1s ease-out;
 	transition: all 1s ease-out;
 }
 
 .item-gallery__additional-img > img:hover {
-	transform: scale(1.05);
+	-webkit-transform: scale(1.05);
+	        transform: scale(1.05);
 	cursor: pointer;
 }
 
 
 .item-details {
-	flex-basis: 394px;
+	-ms-flex-preferred-size: 394px;
+	    flex-basis: 394px;
 	text-transform: uppercase;
 	line-height: 24px;
 }
@@ -611,7 +683,9 @@ input[type="radio"]:checked + label::after {
 
 .item-details .product-order__price,
 .item-details .product-order__button {
-	flex-grow: 0;
+	-webkit-box-flex: 0;
+	    -ms-flex-positive: 0;
+	        flex-grow: 0;
 }
 
 .item-details__components {
@@ -647,7 +721,8 @@ input[type="radio"]:checked + label::after {
     width: 8px;
     height: 8px;
     background-color: black;
-    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
 
 }
 
@@ -680,13 +755,15 @@ input[type="radio"]:checked + label::after {
 
 	text-transform: uppercase;
 	box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
-	animation: bounce 0.6s;
+	-webkit-animation: bounce 0.6s;
+	        animation: bounce 0.6s;
 
 	
 }
 
 .login-form_error {
-	animation: shake 0.6s;
+	-webkit-animation: shake 0.6s;
+	        animation: shake 0.6s;
 }
 
 .login-form__cross {
@@ -718,11 +795,13 @@ input[type="radio"]:checked + label::after {
 }
 
 .login-form__cross::before {
-	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	        transform: rotate(45deg);
 }
 
 .login-form__cross::after {
-	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	        transform: rotate(-45deg);
 }
 
 .login-form__title {
@@ -802,43 +881,118 @@ input[type="checkbox"] + label.login-form__label {
 
 /* <============== animation for form ==============>*/
 
-@keyframes bounce {
+@-webkit-keyframes bounce {
 	0% {
-		transform: translateY(-2000px);
+		-webkit-transform: translateY(-2000px);
+		        transform: translateY(-2000px);
 	}
 
 	40% {
-		transform: translateY(50px);
+		-webkit-transform: translateY(50px);
+		        transform: translateY(50px);
 	}
 
 	70% {
-		transform: translateY(-20px);
+		-webkit-transform: translateY(-20px);
+		        transform: translateY(-20px);
 	}
 
 	90% {
-		transform: translateY(10px);
+		-webkit-transform: translateY(10px);
+		        transform: translateY(10px);
 	}
 
 	100% {
-		transform: translateY(0);
+		-webkit-transform: translateY(0);
+		        transform: translateY(0);
+	}
+}
+
+@keyframes bounce {
+	0% {
+		-webkit-transform: translateY(-2000px);
+		        transform: translateY(-2000px);
+	}
+
+	40% {
+		-webkit-transform: translateY(50px);
+		        transform: translateY(50px);
+	}
+
+	70% {
+		-webkit-transform: translateY(-20px);
+		        transform: translateY(-20px);
+	}
+
+	90% {
+		-webkit-transform: translateY(10px);
+		        transform: translateY(10px);
+	}
+
+	100% {
+		-webkit-transform: translateY(0);
+		        transform: translateY(0);
+	}
+}
+
+@-webkit-keyframes shake {
+	0%, 100% {
+		-webkit-transform: translateX(0);
+		        transform: translateX(0);
+	}
+
+	10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+	}
+
+	  20%, 40%, 60%, 80% {
+	-webkit-transform: translateX(10px);
+	        transform: translateX(10px);
 	}
 }
 
 @keyframes shake {
 	0%, 100% {
-		transform: translateX(0);
+		-webkit-transform: translateX(0);
+		        transform: translateX(0);
 	}
 
 	10%, 30%, 50%, 70%, 90% {
-    transform: translateX(-10px);
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
 	}
 
 	  20%, 40%, 60%, 80% {
-	transform: translateX(10px);
+	-webkit-transform: translateX(10px);
+	        transform: translateX(10px);
 	}
 }
 
 /*<========================= animation for gallery ====================>*/
+
+@-webkit-keyframes opacity {
+	0% {
+		opacity: 0;
+	}
+	10% {
+		opacity: 0.25;
+	}
+	30% {
+		opacity: 0.4;
+	}
+	50% {
+		opacity: 0.6;
+	}
+	80% {
+		opacity: 0.8;
+	}
+
+	100% {
+		opacity: 1;
+	}
+
+}
 
 @keyframes opacity {
 	0% {
